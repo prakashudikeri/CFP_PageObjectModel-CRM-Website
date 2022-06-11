@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FREE CRM Application Test Suite">
+    <listeners>
+        <listener class-name="com.bridgelabz.pom.ExtentReportListener.ExtentReporterNG"/>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="FREE CRM Application Test Cases">
+        <classes>
+            <class name="com.bridgelabz.pomtest.ContactsPageTest">
+                <methods>
+                    <include name="verifyContactsPageLabelTest"/>
+                    <include name="selectSingleContactsTest"/>
+                    <include name="selectMultipleContactsTest"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.pomtest.HomePageTest">
+                <methods>
+                    <include name="verifyHomePageTitleTest"/>
+                    <include name="verifyUserNameTest"/>
+                    <include name="verifyContactsLinkTest"/>
+                </methods>
+            </class>
+            <class name="com.bridgelabz.pomtest.LoginPageTest">
+                <methods>
+                    <include name="loginPageTitleTest"/>
+                    <include name="crmLogoImageTest"/>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
